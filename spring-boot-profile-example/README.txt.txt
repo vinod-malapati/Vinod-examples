@@ -9,5 +9,5 @@ Today is raining day!
 	
 	
 
--- we can entable spring profiles in different ways, we can refer below link for more details
-	link : https://www.baeldung.com/spring-profiles
+-- we can enable spring profiles in different ways, we can refer below link for more details
+link : https://www.baeldung.com/spring-profiles
