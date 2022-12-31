@@ -7,14 +7,14 @@
 
     <artifactId>spring-boot-profile-example</artifactId>
     <packaging>jar</packaging>
-    <name>Spring Boot Profiles Example</name>
+    <name>Spring Boot Profiles with configuration Example</name>
     <description>Spring Boot Profiles Example</description>
     <version>1.0</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.2.RELEASE</version>
+        <version>2.6.6</version>
     </parent>
 
     <properties>

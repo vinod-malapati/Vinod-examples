@@ -5,12 +5,11 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@EnableConfigurationProperties
-@ConfigurationProperties
+@ConfigurationProperties(prefix = "details")
 public class YAMLConfig {
     private String name;
     private String environment;
@@ -156,6 +155,12 @@ public class YAMLConfig {
         public void setDescription(String description) {
             this.description = description;
         }
+    }
+
+    @Bean
+    public String data(){
+        System.out.println("details ::::::::::::"+this.toString());
+        return "";
     }
 
 }

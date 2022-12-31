@@ -1,0 +1,92 @@
+---
+spring:
+    profiles: test
+details:
+    name: test-YAML
+    environment: testingtest
+    enabled: falsetest
+    servers:
+        - www.abc.test.comtest
+        - www.xyz.test.comtest
+
+    external: [www.abc.test.comtest, www.xyz.test.com]
+
+    map:
+        firstkey: key1test
+        secondkey: key2test
+
+    component:
+        idm:
+            url: myurl
+            user: user
+            password: password
+            description: >
+                this should be a long
+                description
+        service:
+            url: myurlservice
+            token: token
+            description: >
+                this should be another long
+
+---
+spring:
+    profiles: dev
+details:
+    name: dev-YAML
+    environment: dev
+    enabled: false
+    servers:
+        - www.abc.dev.com
+        - www.xyz.dev.com
+
+    external: [www.abc.dev.com, www.xyz.dev.com]
+
+    map:
+        firstkey: dev1
+        secondkey: dev2
+
+    component:
+        idm:
+            url: devurl
+            user: userdev
+            password: password
+            description: >
+                this should be a long for dev
+                description
+        service:
+            url: myurlservice
+            token: tokendev
+            description: >
+                this should be another long dev
+
+---
+spring:
+    profiles: prod
+details:
+    name: dev-YAML
+    environment: dev
+    enabled: false
+    servers:
+        - www.abc.dev.com
+        - www.xyz.dev.com
+
+    external: [www.abc.dev.com, www.xyz.dev.com]
+
+    map:
+        firstkey: dev1
+        secondkey: dev2
+
+    component:
+        idm:
+            url: devurl
+            user: userdev
+            password: password
+            description: >
+                this should be a long for dev
+                description
+        service:
+            url: myurlservice
+            token: tokendev
+            description: >
+                this should be another long dev
