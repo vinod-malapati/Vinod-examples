@@ -1,10 +1,12 @@
 ---
 spring:
-    profiles: test
+    config:
+        activate:
+            on-profile: test
 details:
     name: test-YAML
     environment: testingtest
-    enabled: falsetest
+    enabled: false
     servers:
         - www.abc.test.comtest
         - www.xyz.test.comtest
@@ -64,29 +66,29 @@ details:
 spring:
     profiles: prod
 details:
-    name: dev-YAML
-    environment: dev
+    name: prod-YAML
+    environment: prod
     enabled: false
     servers:
-        - www.abc.dev.com
-        - www.xyz.dev.com
+        - www.abc.prod.com
+        - www.xyz.prod.com
 
-    external: [www.abc.dev.com, www.xyz.dev.com]
+    external: [www.abc.prod.com, www.xyz.prod.com]
 
     map:
-        firstkey: dev1
-        secondkey: dev2
+        firstkey: prod1
+        secondkey: prod2
 
     component:
         idm:
-            url: devurl
-            user: userdev
+            url: produrl
+            user: proddev
             password: password
             description: >
-                this should be a long for dev
+                this should be a long for prod
                 description
         service:
             url: myurlservice
-            token: tokendev
+            token: tokenprod
             description: >
-                this should be another long dev
+                this should be another long prod
